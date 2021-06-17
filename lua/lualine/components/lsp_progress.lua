@@ -5,7 +5,6 @@ local _status = ''
 local function _update()
 	local status = ''
 	for i, client in ipairs(_clients) do
-		status = status .. '[' .. client.name .. '] '
 		for j, task in pairs(client.tasks) do
 			status = status .. task.title	
 			if task.percentage then status = status .. ' ' .. task.percentage .. '%%' end
